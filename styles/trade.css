@@ -1,0 +1,244 @@
+/* Banner styles */
+.service-banner {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../images/trade-banner.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.service-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Service content styles */
+.service-content {
+    padding: 4rem 0;
+}
+
+.service-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.service-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Features section */
+.service-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+}
+
+.feature-card {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Trade process */
+.trade-process {
+    background: var(--light-bg);
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.trade-process h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.process-timeline {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    position: relative;
+    gap: 3rem;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    right: 100px;
+    height: 2px;
+    background: var(--primary-color);
+    z-index: 1;
+}
+
+.process-step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+    padding: 0 15px;
+    max-width: 200px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-weight: bold;
+}
+
+.process-step h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Trade regions */
+.trade-regions {
+    padding: 4rem 0;
+}
+
+.trade-regions h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.region-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+}
+
+.region-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.region-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+}
+
+.region-card p {
+    color: #666;
+    padding: 0 1.5rem 1.5rem;
+    margin: 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+    .process-timeline {
+        padding: 0 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .process-step {
+        flex: 0 1 200px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .service-intro p {
+        font-size: 1.1rem;
+    }
+    
+    .service-features,
+    .region-grid {
+        padding: 0 1rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .process-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .process-timeline::before {
+        display: none;
+    }
+    
+    .process-step {
+        max-width: 300px;
+        width: 100%;
+    }
+    
+    .region-card img {
+        height: 150px;
+    }
+} 
